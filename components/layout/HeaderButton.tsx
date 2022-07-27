@@ -1,5 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
+import { Colors } from "../styles/colors";
 
 interface HeaderButtonProps {
   text: string;
@@ -11,13 +12,13 @@ const HeaderButton = ({ text, isActive, onPress }: HeaderButtonProps) => (
   <View
     style={[
       styles.container,
-      { backgroundColor: isActive ? "black" : "white" },
+      { backgroundColor: isActive ? Colors.black : Colors.white },
     ]}
   >
     <TouchableOpacity onPress={onPress.bind(this, text)}>
       <Text
         style={{
-          color: isActive ? "white" : "black",
+          color: isActive ? Colors.white : Colors.black,
           fontSize: 18,
           fontWeight: "bold",
         }}

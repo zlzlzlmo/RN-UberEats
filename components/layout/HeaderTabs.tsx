@@ -1,6 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React, { useState } from "react";
 import HeaderButton from "./HeaderButton";
+import SearchBar from "../features/search/SearchBar";
 
 const Tabs = ["Delivery", "Pickup"];
 
