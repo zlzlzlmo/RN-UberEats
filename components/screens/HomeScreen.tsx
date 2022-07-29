@@ -12,7 +12,9 @@ const HomeScreen = () => {
         <HeaderTabs />
         <SearchBar />
       </View>
-      <Categories />
+      <View>
+        <Categories />
+      </View>
     </SafeAreaView>
   );
 };
