@@ -26,4 +26,4 @@ export const LOCAL_RESTAURANTS = [
     reviews: 700,
     rating: 4.9,
   },
-] as const;
+];

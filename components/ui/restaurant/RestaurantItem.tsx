@@ -4,12 +4,28 @@ import RestaurantInfo from "./RestaurantInfo";
 import RestaurantImage from "./RestaurantImage";
 import { Colors } from "../../styles/colors";
 
-const RestaurantItem = () => {
+interface RestaurantItemProps {
+  name: string;
+  image_url: string;
+  categories: string[];
+  price: string;
+  reviews: number;
+  rating: number;
+}
+
+const RestaurantItem = ({
+  name,
+  image_url,
+  categories,
+  price,
+  reviews,
+  rating,
+}: RestaurantItemProps) => {
   return (
     <Pressable style={{ marginBottom: 30 }}>
       <View style={styles.container}>
-        <RestaurantImage />
-        <RestaurantInfo name="Restaurant Name" rating={4} />
+        <RestaurantImage image_url={image_url} />
+        <RestaurantInfo name={name} rating={rating} />
       </View>
     </Pressable>
   );

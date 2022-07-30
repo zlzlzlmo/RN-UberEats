@@ -4,11 +4,15 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { LOCAL_RESTAURANTS } from "../../data/constants/restaurants";
 import { Colors } from "../../styles/colors";
 
-const RestaurantImage = () => {
+interface RestaurantImageProps {
+  image_url: string;
+}
+
+const RestaurantImage = ({ image_url }: RestaurantImageProps) => {
   return (
     <>
       <Image
-        source={{ uri: LOCAL_RESTAURANTS[0].image_url }}
+        source={{ uri: image_url }}
         style={{ width: "100%", height: 180 }}
       />
       <TouchableOpacity style={{ position: "absolute", right: 20, top: 20 }}>
