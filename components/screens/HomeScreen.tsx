@@ -4,7 +4,7 @@ import HeaderTabs from "../layout/HeaderTabs";
 import { Colors } from "../styles/colors";
 import SearchBar from "../features/search/SearchBar";
 import Categories from "../features/category/Categories";
-import RestaurantItem from "../ui/restaurant/RestaurantItem";
+import RestaurantItems from "../ui/restaurant/RestaurantItems";
 
 const HomeScreen = () => {
   return (
@@ -15,7 +15,7 @@ const HomeScreen = () => {
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Categories />
-        <RestaurantItem />
+        <RestaurantItems />
       </ScrollView>
     </SafeAreaView>
   );
