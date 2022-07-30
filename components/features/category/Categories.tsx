@@ -1,29 +1,7 @@
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 import React from "react";
 import { Colors } from "../../styles/colors";
-
-const items = [
-  {
-    image: require("../../../assets/images/shopping-bag.png"),
-    text: "Pick-up",
-  },
-  {
-    image: require("../../../assets/images/soft-drink.png"),
-    text: "Soft Drinks",
-  },
-  {
-    image: require("../../../assets/images/bread.png"),
-    text: "Bakery Items",
-  },
-  {
-    image: require("../../../assets/images/fast-food.png"),
-    text: "Fast Foods",
-  },
-  {
-    image: require("../../../assets/images/deals.png"),
-    text: "Deals",
-  },
-];
+import { CATEGORY_ITEMS } from "../../data/constants/categories";
 
 const Categories = () => {
   return (
@@ -37,7 +15,7 @@ const Categories = () => {
         paddingLeft: 20,
       }}
     >
-      {items.map((item, index) => (
+      {CATEGORY_ITEMS.map((item, index) => (
         <View style={styles.category} key={index}>
           <Image
             source={item.image}
